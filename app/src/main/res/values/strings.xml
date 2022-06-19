@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Apolaroid</string>
+    <string name="tUsername">Masukkan Username</string>
+    <string name="tPassword">Masukkan Password</string>
+    <string name="bsignin">Sign In</string>
+    <string name="lApolaroid">Apolaroid App</string>
+    <string name="lUsername">Username</string>
+    <string name="lPassword">Password</string>
+</resources>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.RentalInstax">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp"
+            app:strokeColor="@color/pink"
+            app:cardBackgroundColor="@color/kuningmuda"
+            app:strokeWidth="3dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/tIdentitas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Identitas Penyewa Instax"
+                    android:textColor="@color/ungu"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvNama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tIdentitas"
+                    android:layout_marginTop="20dp"
+                    android:text="Nama"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <Spinner
+                    android:id="@+id/spinnernama"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/tvNama" />
+
+                <TextView
+                    android:id="@+id/tDataInstax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spinnernama"
+                    android:gravity="center"
+                    android:text="Data Instax"
+                    android:textColor="@color/ungu"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tInstax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tDataInstax"
+                    android:layout_marginTop="20dp"
+                    android:text="Nama Instax"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerinstax"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/tInstax" />
+
+                <TextView
+                    android:id="@+id/tPromo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spinnerinstax"
+                    android:layout_marginTop="20dp"
+                    android:text="Promo"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <RadioGroup
+                    android:id="@+id/duapromo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tPromo"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radbutWeekEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="Weekend (10%)"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/radbutWeekDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Weekday (5%)"
+                        android:textColor="@color/black" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/tLamasewa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/duapromo"
+                    android:layout_marginTop="20dp"
+                    android:text="Lama Sewa Instax (Hari)"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <Button
+                    android:id="@+id/btnkurang"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/tLamasewa"
+                    android:layout_marginTop="5dp"
+                    android:text="kurang"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/bg_shape"
+                    />
+
+                <TextView
+                    android:id="@+id/lamasewa"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/tLamasewa"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/btnkurang"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <Button
+                    android:id="@+id/btntambah"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/lamasewa"
+                    android:layout_marginLeft="-1dp"
+                    android:layout_marginTop="-35dp"
+                    android:layout_toRightOf="@+id/lamasewa"
+                    android:background="@drawable/bg_shape"
+                    android:text="tambah"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/btnRental"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_shape"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:text="Rental Sekarang"/>
+    </LinearLayout>
+
+</RelativeLayout>
